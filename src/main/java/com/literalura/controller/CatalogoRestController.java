@@ -27,7 +27,7 @@ public class CatalogoRestController {
 
     @GetMapping("/livros/buscar")
     public ResponseEntity<LivroDTO> buscarLivroPorTitulo(@RequestParam String titulo) {
-        Livro livro = livroService.buscarESalvarLivroPorTitulo(titulo); // Este método retorna Livro (entidade)
+        Livro livro = livroService.buscarESalvarLivroPorTitulo(titulo);
         if (livro != null) {
             LivroDTO livroDTO = new LivroDTO(
                     livro.getTitulo(),
